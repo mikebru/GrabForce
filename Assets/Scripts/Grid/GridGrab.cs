@@ -18,6 +18,8 @@ public class GridGrab : MonoBehaviour {
     public int GridSize = 2;
 
     private float groundLevel;
+    private float objectHeight;
+
 
     // Use this for initialization
     void Start () {
@@ -57,6 +59,9 @@ public class GridGrab : MonoBehaviour {
                 if (Input.GetMouseButtonDown(0) && ConnectedBody == null)
                 {
                     ConnectedBody = hit.transform.gameObject;
+
+                    objectHeight = ConnectedBody.transform.position.y;
+
                     lineRender.SetActive(true);
                 }
             }
@@ -70,7 +75,7 @@ public class GridGrab : MonoBehaviour {
             //move connected object to this position
             StopCoroutine("MoveConnectedBody");
 
-            Vector3 moveLocation = new Vector3(cursorObject.position.x, ConnectedBody.transform.position.y + groundLevel, cursorObject.position.z);
+            Vector3 moveLocation = new Vector3(cursorObject.position.x, objectHeight + groundLevel, cursorObject.position.z);
 
             StartCoroutine(MoveConnectedBody(moveLocation, MoveSpeed - ConnectedBody.GetComponent<Rigidbody>().mass / 5.0f));
 

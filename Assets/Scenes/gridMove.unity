@@ -578,8 +578,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!23 &1025841795
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -926,7 +926,6 @@ MonoBehaviour:
   cursorObject: {fileID: 517160980}
   ConnectedBody: {fileID: 0}
   lineRender: {fileID: 890275586}
-  Player: {fileID: 0}
   MoveSpeed: 4
   GridSize: 2
 --- !u!1 &1530033440
@@ -961,8 +960,8 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 122
-  m_CollisionDetection: 0
+  m_Constraints: 112
+  m_CollisionDetection: 1
 --- !u!23 &1530033442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1062,7 +1061,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 112
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!23 &1776653686
 MeshRenderer:
   m_ObjectHideFlags: 0
